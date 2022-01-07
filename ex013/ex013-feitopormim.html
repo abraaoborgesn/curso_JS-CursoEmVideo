@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: black;
+            color: white;
+            font-size: 20pt;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        var agora = new Date()
+        var diaSem = agora.getDay()
+        var hora = agora.getHours()
+        var minutos = agora.getMinutes()
+     
+
+        switch(diaSem){
+    case 0:
+            document.write(`<p>Hoje é Domingo. São exatamente ${hora} horas e ${minutos} minutos.</p>`)
+        break
+    case 1:
+            document.write(`<p>Hoje é Segunda-Feira. São exatamente ${hora} horas e ${minutos} minutos.</p>`)
+        break
+    case 2:
+            document.write(`<p>Hoje é Terça-Feira. São exatamente ${hora} horas e ${minutos} minutos.</p>`)
+        break
+    case 3:
+            document.write(`<p>Hoje é Quarta-Feira. São exatamente ${hora} horas e ${minutos} minutos.</p>`)
+        break
+    case 4:
+            document.write(`<p>Hoje é Quinta-Feira. São exatamente ${hora} horas e ${minutos} minutos.<p/>`)
+        break
+    case 5:
+            document.write(`<p>Hoje é Sexta-Feira. São exatamente ${hora} horas e ${minutos} minutos.</p>`)
+        break
+    case 6:
+            document.write(`<p>Hoje é Sábado. São exatamente ${hora} horas e ${minutos} minutos.</p>`)
+        break
+}
+
+    </script>
+    
+</body>
+</html>

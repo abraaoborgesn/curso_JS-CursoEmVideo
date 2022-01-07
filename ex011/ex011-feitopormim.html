@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Urna</title>
+    <style>
+        body{
+            background: black;
+            font-size: 12pt;
+            font-family: 'Press Start 2P', cursive;
+            color: white;
+            
+        }
+        input#idade{
+            font-size: 12pt;
+            font-family: 'Press Start 2P', cursive;
+            width: 200px;
+            height: 25px;
+            margin-left: 10px;
+            border: yellow 4px solid;
+            padding-left: 10px;
+        }
+        input#verificar{
+            font-size: 16pt;
+            font-family: 'Press Start 2P', cursive;  
+            border: white 4px solid;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de votação</h1>
+    Digite sua idade: <input type="number" name="idade" id="idade">
+    <input type="button" value="Verificar" id="verificar"onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+        var idad = document.getElementById("idade")
+        var res = document.getElementById("res")
+        var idade = Number(idad.value)
+        res.innerHTML = `<p>Sua idade é <strong>${idade}</strong></p>`
+
+        if(idade<16){
+            res.innerHTML += "<p>Você não está apto a votar!</p>"
+        } else if(idade>=18 && idade<65){
+            res.innerHTML += "<p>Seu voto é obrigatório!"
+        } else{
+            res.innerHTML += "<p>Seu voto é opcional.</p>"
+        }
+           
+
+        }
+    </script>
+</body>
+</html>
